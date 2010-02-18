@@ -41,6 +41,9 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Speech">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -101,9 +104,10 @@
     <Compile Include="Recognizer\Recognizer.cs" />
     <Compile Include="Recognizer\Recognizer.properties.cs" />
     <Compile Include="RecognizerCommand.cs" />
+    <Compile Include="Recognizer\TestNAudioRecordRecognizer.cs" />
     <Compile Include="StartRecognizerCommand.cs" />
     <Compile Include="StopRecognizerCommand.cs" />
-    <Compile Include="ThaiNumRecognizer.cs" />
+    <Compile Include="Recognizer\TestSAPIRecognizer.cs" />
     <Compile Include="ToggleRecognizerCommand.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

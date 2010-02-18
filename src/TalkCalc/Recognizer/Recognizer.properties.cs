@@ -22,7 +22,7 @@ namespace TalkCalc.Recognizer
 
         public static readonly DependencyProperty IsRecognizingProperty = IsRecognizingPropertyKey.DependencyProperty;
         public static readonly DependencyProperty HasResultProperty = HasResultPropertyKey.DependencyProperty;
-        public static readonly DependencyProperty ResultProperty = HasResultPropertyKey.DependencyProperty;
+        public static readonly DependencyProperty ResultProperty = ResultPropertyKey.DependencyProperty;
 
 
         public bool IsRecognizing

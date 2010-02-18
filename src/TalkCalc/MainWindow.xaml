@@ -7,7 +7,9 @@
     Title="TalkCalc" Background="Transparent" AllowsTransparency="True"
     ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Window.Resources>
-        <r:Recognizer x:Key="engine" />
+        <!--<r:Recognizer x:Key="engine" />-->
+        <!--<r:TestNAudioRecordRecognizer x:Key="engine" />-->
+        <r:TestSAPIRecognizer x:Key="engine" />
         <t:StartRecognizerCommand x:Key="startCmd" Engine="{StaticResource engine}" />
         <t:StopRecognizerCommand x:Key="stopCmd" Engine="{StaticResource engine}" />
         <t:ToggleRecognizerCommand x:Key="toggleCmd" Engine="{StaticResource engine}" />
