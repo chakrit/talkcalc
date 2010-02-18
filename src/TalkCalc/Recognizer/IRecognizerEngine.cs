@@ -4,7 +4,7 @@ using System.Windows;
 
 using Expression = System.Linq.Expressions.Expression;
 
-namespace TalkCalc
+namespace TalkCalc.Recognizer
 {
     public interface IRecognizerEngine : INotifyPropertyChanged
     {

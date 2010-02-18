@@ -72,7 +72,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IRecognizerEngine.cs" />
+    <Compile Include="Recognizer\IRecognizerEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -98,8 +98,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyBooleanToVisibilityConverter.cs" />
-    <Compile Include="Recognizer.cs" />
-    <Compile Include="Recognizer.properties.cs" />
+    <Compile Include="Recognizer\Recognizer.cs" />
+    <Compile Include="Recognizer\Recognizer.properties.cs" />
     <Compile Include="RecognizerCommand.cs" />
     <Compile Include="StartRecognizerCommand.cs" />
     <Compile Include="StopRecognizerCommand.cs" />

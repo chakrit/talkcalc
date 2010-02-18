@@ -4,7 +4,7 @@ using System.Windows;
 
 using Expression = System.Linq.Expressions.Expression;
 
-namespace TalkCalc
+namespace TalkCalc.Recognizer
 {
     public partial class Recognizer : DependencyObject, IRecognizerEngine
     {
@@ -35,7 +35,8 @@ namespace TalkCalc
         protected virtual Expression StopCore()
         {
             // test expression
-            return Expression.Add(Expression.Constant(4), Expression.Constant(5));
+            return Expression.Add(Expression.Constant(4),
+                Expression.Multiply(Expression.Constant(5), Expression.Constant(6)));
         }
 
 

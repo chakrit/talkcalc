@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Input;
 
+using TalkCalc.Recognizer;
+
 namespace TalkCalc
 {
     public abstract class RecognizerCommand : DependencyObject, ICommand
