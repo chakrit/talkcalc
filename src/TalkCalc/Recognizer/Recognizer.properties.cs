@@ -16,7 +16,7 @@ namespace TalkCalc.Recognizer
             typeof(Recognizer), new PropertyMetadata(false));
 
         public static readonly DependencyPropertyKey ResultPropertyKey =
-            DependencyProperty.RegisterReadOnly("Result", typeof(Expression),
+            DependencyProperty.RegisterReadOnly("Result", typeof(string),
             typeof(Recognizer), new PropertyMetadata(null));
 
 
@@ -37,9 +37,9 @@ namespace TalkCalc.Recognizer
             protected set { SetValue(HasResultPropertyKey, value); }
         }
 
-        public Expression Result
+        public string Result
         {
-            get { return (Expression)GetValue(ResultProperty); }
+            get { return (string)GetValue(ResultProperty); }
             protected set
             {
                 if (value != null && !HasResult)

@@ -11,7 +11,7 @@ namespace TalkCalc.Recognizer
         bool IsRecognizing { get; }
 
         bool HasResult { get; }
-        Expression Result { get; }
+        string Result { get; }
 
         void Start();
         void Stop();

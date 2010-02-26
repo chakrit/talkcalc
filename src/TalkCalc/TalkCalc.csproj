@@ -33,6 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.1.1.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\AForge.NET\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.MachineLearning, Version=2.1.1.0, Culture=neutral, PublicKeyToken=b3f1bdd78212f4e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\AForge.NET\AForge.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Neuro, Version=2.1.1.0, Culture=neutral, PublicKeyToken=2094f4ea39731d4f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\AForge.NET\AForge.Neuro.dll</HintPath>
+    </Reference>
     <Reference Include="NAudio, Version=1.3.8.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\NAudio\NAudio.dll</HintPath>
@@ -101,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyBooleanToVisibilityConverter.cs" />
+    <Compile Include="Recognizer\HTKRecognizer.cs" />
     <Compile Include="Recognizer\Recognizer.cs" />
     <Compile Include="Recognizer\Recognizer.properties.cs" />
     <Compile Include="RecognizerCommand.cs" />
