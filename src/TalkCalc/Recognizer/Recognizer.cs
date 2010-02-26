@@ -6,7 +6,7 @@ using Expression = System.Linq.Expressions.Expression;
 
 namespace TalkCalc.Recognizer
 {
-    public partial class Recognizer : DependencyObject, IRecognizerEngine
+    public partial class Recognizer : DependencyObject, IRecognizer
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

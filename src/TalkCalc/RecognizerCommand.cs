@@ -11,15 +11,15 @@ namespace TalkCalc
     public abstract class RecognizerCommand : DependencyObject, ICommand
     {
         public static readonly DependencyProperty EngineProperty =
-            DependencyProperty.Register("Engine", typeof(IRecognizerEngine),
+            DependencyProperty.Register("Engine", typeof(IRecognizer),
             typeof(RecognizerCommand), new PropertyMetadata(null));
 
 
         public event EventHandler CanExecuteChanged;
 
-        public IRecognizerEngine Engine
+        public IRecognizer Engine
         {
-            get { return (IRecognizerEngine)GetValue(EngineProperty); }
+            get { return (IRecognizer)GetValue(EngineProperty); }
             set { SetValue(EngineProperty, value); }
         }
 
@@ -35,9 +35,9 @@ namespace TalkCalc
             if (e.Property == EngineProperty)
             {
                 if (e.OldValue != null)
-                    ((IRecognizerEngine)e.OldValue).PropertyChanged -= enginePropertyChanged;
+                    ((IRecognizer)e.OldValue).PropertyChanged -= enginePropertyChanged;
                 if (e.NewValue != null)
-                    ((IRecognizerEngine)e.NewValue).PropertyChanged += enginePropertyChanged;
+                    ((IRecognizer)e.NewValue).PropertyChanged += enginePropertyChanged;
             }
         }
 

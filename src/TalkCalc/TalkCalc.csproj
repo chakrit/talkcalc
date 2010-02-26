@@ -87,7 +87,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Recognizer\IRecognizerEngine.cs" />
+    <Compile Include="Recognizer\IRecognizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -112,6 +112,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculator\Calculator.cs" />
+    <Compile Include="Calculator\Calculator.properties.cs" />
+    <Compile Include="Calculator\ICalculator.cs" />
     <Compile Include="MyBooleanToVisibilityConverter.cs" />
     <Compile Include="Recognizer\HTKRecognizer.cs" />
     <Compile Include="Recognizer\Recognizer.cs" />
