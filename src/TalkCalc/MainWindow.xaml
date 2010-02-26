@@ -9,7 +9,7 @@
     ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <!-- Recognizer engine -->
-        <r:Recognizer x:Key="engine" x:Name="engine" />
+        <r:Recognizer x:Key="engine" />
         <!--<r:TestNAudioRecordRecognizer x:Key="engine" />-->
         <!--<r:TestSAPIRecognizer x:Key="engine" />-->
         <!-- Define commands for working with the engine -->
@@ -17,7 +17,6 @@
         <t:StopRecognizerCommand x:Key="stopCmd" Engine="{StaticResource engine}" />
         <t:ToggleRecognizerCommand x:Key="toggleCmd" Engine="{StaticResource engine}" />
         <!-- Define a calculator to takes result from recognizer engine and calculates it -->
-        <c:Calculator x:Key="calc" Expression="{Binding Source={StaticResource engine}, Path=Result}" />
         <!-- Misc WPF stuffs -->
         <t:MyBooleanToVisibilityConverter x:Key="visConv" Invert="True" />
         <t:MyBooleanToVisibilityConverter x:Key="invVisConv" />
@@ -33,6 +32,9 @@
         <KeyBinding Command="{StaticResource toggleCmd}" Key="Space" />
     </Window.InputBindings>
     <Border Background="White" CornerRadius="10" Margin="15">
+        <Border.Resources>
+            <c:Calculator x:Key="calc" Expression="{Binding Source={StaticResource engine}, Path=Result}" />
+        </Border.Resources>
         <Border.BitmapEffect>
             <OuterGlowBitmapEffect GlowColor="WhiteSmoke" GlowSize="15" />
         </Border.BitmapEffect>

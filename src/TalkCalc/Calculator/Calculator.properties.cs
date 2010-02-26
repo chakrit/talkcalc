@@ -8,14 +8,13 @@ namespace TalkCalc.Calculator
     {
         public static readonly DependencyPropertyKey ResultPropertyKey =
             DependencyProperty.RegisterReadOnly("Result", typeof(float),
-            typeof(Calculator), new PropertyMetadata(0F));
+            typeof(Calculator), new FrameworkPropertyMetadata(0F));
 
-        public static readonly DependencyProperty ResultProperty =
-            ResultPropertyKey.DependencyProperty;
+        public static readonly DependencyProperty ResultProperty = ResultPropertyKey.DependencyProperty;
 
         public static readonly DependencyProperty ExpressionProperty =
             DependencyProperty.Register("Expression", typeof(string),
-            typeof(Calculator), new PropertyMetadata(null));
+            typeof(Calculator), new FrameworkPropertyMetadata(null));
 
 
         public string Expression
@@ -23,6 +22,7 @@ namespace TalkCalc.Calculator
             get { return (string)GetValue(ExpressionProperty); }
             set
             {
+                Debug.WriteLine("EXPRESSION HAS BEEN SET - EXPRESSION HAS BEEN SET");
                 SetValue(ExpressionProperty, value);
                 Calculate();
             }

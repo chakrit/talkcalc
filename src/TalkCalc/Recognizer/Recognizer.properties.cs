@@ -1,7 +1,6 @@
 ﻿
 using System.Windows;
-
-using Expression = System.Linq.Expressions.Expression;
+using System.Diagnostics;
 
 namespace TalkCalc.Recognizer
 {
@@ -9,15 +8,15 @@ namespace TalkCalc.Recognizer
     {
         public static readonly DependencyPropertyKey IsRecognizingPropertyKey =
             DependencyProperty.RegisterReadOnly("IsRecognizing", typeof(bool),
-            typeof(Recognizer), new PropertyMetadata(false));
+            typeof(Recognizer), new FrameworkPropertyMetadata(false));
 
         public static readonly DependencyPropertyKey HasResultPropertyKey =
             DependencyProperty.RegisterReadOnly("HasResult", typeof(bool),
-            typeof(Recognizer), new PropertyMetadata(false));
+            typeof(Recognizer), new FrameworkPropertyMetadata(false));
 
         public static readonly DependencyPropertyKey ResultPropertyKey =
             DependencyProperty.RegisterReadOnly("Result", typeof(string),
-            typeof(Recognizer), new PropertyMetadata(null));
+            typeof(Recognizer), new FrameworkPropertyMetadata(null));
 
 
         public static readonly DependencyProperty IsRecognizingProperty = IsRecognizingPropertyKey.DependencyProperty;
@@ -42,6 +41,7 @@ namespace TalkCalc.Recognizer
             get { return (string)GetValue(ResultProperty); }
             protected set
             {
+                Debug.WriteLine("RESULT HAS BEEN SET - RESULT HAS BEEN SET");
                 if (value != null && !HasResult)
                     HasResult = true;
                 else if (value == null && HasResult)
