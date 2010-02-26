@@ -21,7 +21,7 @@ namespace TalkCalc.Recognizer
             _wave.StartRecording();
         }
 
-        protected override Expression StopCore()
+        protected override string StopCore()
         {
             _wave.StopRecording();
             _writer.Flush();
@@ -30,7 +30,7 @@ namespace TalkCalc.Recognizer
             _wave.Dispose();
             _writer.Dispose();
 
-            return Expression.Constant(@"Recorded c:\temp\test.wav");
+            return "Recorded c:\temp\test.wav";
         }
     }
 }

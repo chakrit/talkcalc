@@ -34,21 +34,16 @@ namespace TalkCalc.Recognizer
 
         private void speechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            var text = Expression.Constant(e.Result.Text);
+            var text = e.Result.Text;
 
-            if (Result == null)
+            if (string.IsNullOrEmpty(Result))
                 Result = text;
             else
-            {
-                var str = typeof(string);
-                var method = str.GetMethod("Concat", new[] { str, str });
-                Result = Expression.Call(null, method,
-                    Result, Expression.Constant(e.Result.Text));
-            }
+                Result += text;
         }
 
 
-        protected override Expression StopCore()
+        protected override string StopCore()
         {
             _engine.RecognizeAsyncStop();
             return Result;

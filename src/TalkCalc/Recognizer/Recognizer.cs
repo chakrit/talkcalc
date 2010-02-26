@@ -32,11 +32,10 @@ namespace TalkCalc.Recognizer
 
 
         protected virtual void StartCore() { }
-        protected virtual Expression StopCore()
+        protected virtual string StopCore()
         {
             // test expression
-            return Expression.Add(Expression.Constant(4),
-                Expression.Multiply(Expression.Constant(5), Expression.Constant(6)));
+            return "4 + 5*6";
         }
 
 
