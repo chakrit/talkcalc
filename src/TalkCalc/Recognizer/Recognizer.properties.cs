@@ -41,7 +41,6 @@ namespace TalkCalc.Recognizer
             get { return (string)GetValue(ResultProperty); }
             protected set
             {
-                Debug.WriteLine("RESULT HAS BEEN SET - RESULT HAS BEEN SET");
                 if (value != null && !HasResult)
                     HasResult = true;
                 else if (value == null && HasResult)

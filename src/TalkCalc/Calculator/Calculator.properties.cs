@@ -14,18 +14,13 @@ namespace TalkCalc.Calculator
 
         public static readonly DependencyProperty ExpressionProperty =
             DependencyProperty.Register("Expression", typeof(string),
-            typeof(Calculator), new FrameworkPropertyMetadata(null));
+            typeof(Calculator), new FrameworkPropertyMetadata(null, expressionChanged));
 
 
         public string Expression
         {
             get { return (string)GetValue(ExpressionProperty); }
-            set
-            {
-                Debug.WriteLine("EXPRESSION HAS BEEN SET - EXPRESSION HAS BEEN SET");
-                SetValue(ExpressionProperty, value);
-                Calculate();
-            }
+            set { SetValue(ExpressionProperty, value); }
         }
 
         public float Result
@@ -34,6 +29,14 @@ namespace TalkCalc.Calculator
             protected set { SetValue(ResultPropertyKey, value); }
         }
 
+
+        private static void expressionChanged(DependencyObject o, DependencyPropertyChangedEventArgs e)
+        {
+            var calc = o as Calculator;
+            if (calc == null) return;
+
+            calc.OnExpressionChanged(e);
+        }
 
     }
 }
