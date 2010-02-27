@@ -32,12 +32,18 @@ namespace TalkCalc.Recognizer
 
         protected override void StartCore()
         {
+            var alreadyRunning = Process.GetProcessesByName(Path.GetFileName(_startInfo.FileName));
+            foreach (var process in alreadyRunning)
+                process.Kill();
+
             _proc = new Process();
-            _proc.StartInfo = buildHtkStartInfo(_htkPath);
+            _proc.StartInfo = _startInfo;
 
             _proc.EnableRaisingEvents = true;
             _proc.OutputDataReceived += htkDataReceived;
             _proc.ErrorDataReceived += htkDataReceived;
+
+            _translator.Reset();
 
             _proc.Start();
             _proc.BeginOutputReadLine();
@@ -47,8 +53,12 @@ namespace TalkCalc.Recognizer
         {
             var expr = _translator.Translate(e.Data);
 
-            // avoids re-calculating same result
-            var act = new Action(() => { if (Result != expr) Result = expr; });
+            // avoids re-calculating same result or removing previous result
+            var act = new Action(() =>
+            {
+                if (Result != expr && !string.IsNullOrEmpty(expr))
+                    Result = expr;
+            });
 
             if (Dispatcher.Thread != Thread.CurrentThread)
                 Dispatcher.Invoke(act);
@@ -60,7 +70,7 @@ namespace TalkCalc.Recognizer
         protected override string StopCore()
         {
             _proc.CancelOutputRead();
-            _proc.Close();
+            _proc.Kill();
 
             return Result;
         }

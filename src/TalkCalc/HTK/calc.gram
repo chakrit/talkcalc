@@ -1,0 +1,19 @@
+
+$ones = ONE | TWO | THREE | FOUR | FIVE | SIX | SEVEN | EIGHT | NINE;
+$ones_begin = TWO_ALT | THREE | FOUR | FIVE | SIX | SEVEN | EIGHT | NINE;
+$ones_end = ONE_ALT | TWO | THREE | FOUR | FIVE | SIX | SEVEN | EIGHT | NINE;
+
+$tens = [$ones_begin] TEN [$ones_end];
+$hundreds = [$ones] HUNDRED [$tens | $ones_end];
+$hundreds_x = $ones HUNDRED [$tens | $ones_end];
+$thousands = [$ones] THOUSAND [$hundreds_x | $tens | $ones];
+$thousands_x = $ones THOUSAND [$hundreds_x | $tens | $ones];
+$tenthousands = [$ones] TENTHOUSAND [$thousands_x | $hundreds_x | $tens | $ones];
+$tenthousands_x = $ones TENTHOUSAND [$thousands_x | $hundreds_x | $tens | $ones];
+$hundredthousands = [$ones] HUNDREDTHOUSAND [$tenthousands_x | $thousands_x | $hundreds_x | $tens | $ones];
+$hundredthousands_x = $ones HUNDREDTHOUSAND [$tenthousands_x | $thousands_x | $hundreds_x | $tens | $ones];
+
+$numbers = ($hundredthousands | $tenthousands | $thousands | $hundreds | $tens | $ones | ZERO);
+$ops = PLUS | MINUS | MULTIPLY | DIVIDE;
+
+( SENT-START ($numbers [<$ops $numbers>] EQUAL) SENT-END )

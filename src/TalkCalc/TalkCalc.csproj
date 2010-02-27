@@ -95,6 +95,7 @@
     <Content Include="HTK\liverecog.config" />
     <Content Include="HTK\thai.am" />
     <Content Include="HTK\tie.list" />
+    <None Include="HTK\calc.gram" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,6 +118,7 @@
     <Compile Include="ToggleRecognizerCommand.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HTK\HParse.exe" />
     <Content Include="HTK\HVite.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
