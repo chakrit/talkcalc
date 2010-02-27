@@ -90,8 +90,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Content Include="HTK\grammar\calc.dict" />
-    <Content Include="HTK\grammar\calc.gram" />
+    <Content Include="HTK\in\calc.dict" />
+    <Content Include="HTK\in\calc.gram" />
+    <None Include="HTK\code.bat" />
+    <None Include="HTK\recognize.bat" />
+    <None Include="HTK\trainam.bat" />
+    <None Include="HTK\trainlm.bat" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -148,9 +152,14 @@
     <Content Include="HTK\bin\LNorm.exe" />
     <Content Include="HTK\bin\LPlex.exe" />
     <Content Include="HTK\bin\LSubset.exe" />
+    <Content Include="HTK\wav\1+2x3.wav" />
+    <Content Include="HTK\wav\100div25.wav" />
+    <Content Include="HTK\wav\123456+7899.wav" />
+    <Content Include="HTK\wav\7+8+9+5+6-4-3-2-1.wav" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HTK\data\" />
+    <Folder Include="HTK\out\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

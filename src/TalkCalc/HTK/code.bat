@@ -1,0 +1,1 @@
+@bin\HParse grammar\calc.gram out\calc.wdnet
