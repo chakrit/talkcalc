@@ -97,6 +97,7 @@
     <None Include="HTK\in\code.config" />
     <None Include="HTK\in\code.scp" />
     <None Include="HTK\in\hmm_proto" />
+    <None Include="HTK\in\monophones.list" />
     <None Include="HTK\in\monophones.mlf" />
     <None Include="HTK\in\train.config" />
     <None Include="HTK\in\train.scp" />
