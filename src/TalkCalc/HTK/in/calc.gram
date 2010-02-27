@@ -16,4 +16,4 @@ $hundredthousands_x = $ones HUNDREDTHOUSAND [$tenthousands_x | $thousands_x | $h
 $numbers = ($hundredthousands | $tenthousands | $thousands | $hundreds | $tens | $ones);
 $ops = PLUS | MINUS | MULTIPLY | DIVIDE;
 
-( SENT-START ($numbers [<$ops $numbers>]) SENT-END )
+( SENT-START ($numbers [<$ops $numbers>] EQUAL) SENT-END )
