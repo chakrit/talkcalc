@@ -1,13 +1,12 @@
 ﻿
-using System.ComponentModel;
-using System.Windows;
-using System.Collections.Generic;
-using System.Linq;
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Text;
+using System.Windows;
 
-using StrStack = System.Collections.Generic.Stack<string>;
 using FloatStack = System.Collections.Generic.Stack<float>;
+using StrStack = System.Collections.Generic.Stack<string>;
 
 namespace TalkCalc.Calculator
 {
@@ -54,17 +53,17 @@ namespace TalkCalc.Calculator
                 else
                 {
                     if (currentOps != null && precendenceOf(currentOps) > precendenceOf(token))
-                    {
-                        var result = flatten(nums, ops);
-                        nums.Push(result);
-                    }
+                        nums.Push(flatten(nums, ops));
 
                     ops.Push(currentOps = token);
                 }
             }
 
             // calculate all remaining values
-            return flatten(nums, ops);
+            var result = flatten(nums, ops);
+
+            Debug.WriteLine("CALC> " + expr + " = " + result);
+            return result;
         }
 
         // calculates the current state and return the result

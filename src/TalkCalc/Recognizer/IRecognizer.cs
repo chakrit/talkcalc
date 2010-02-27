@@ -1,8 +1,5 @@
 ﻿
 using System.ComponentModel;
-using System.Windows;
-
-using Expression = System.Linq.Expressions.Expression;
 
 namespace TalkCalc.Recognizer
 {

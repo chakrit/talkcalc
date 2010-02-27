@@ -10,18 +10,16 @@
     <Window.Resources>
         <!-- Recognizer engine -->
         <r:HTKRecognizer x:Key="engine" />
-        <!--<r:Recognizer x:Key="engine" />-->
-        <!--<r:TestNAudioRecordRecognizer x:Key="engine" />-->
-        <!--<r:TestSAPIRecognizer x:Key="engine" />-->
-        <!-- Define commands for working with the engine -->
+        <!-- Calculator to calculate results from the recognizer -->
+        <c:Calculator x:Key="calc" Expression="{Binding Source={StaticResource engine}, Path=Result}" />
+        <!-- Commands for working with the engine -->
         <t:StartRecognizerCommand x:Key="startCmd" Engine="{StaticResource engine}" />
         <t:StopRecognizerCommand x:Key="stopCmd" Engine="{StaticResource engine}" />
         <t:ToggleRecognizerCommand x:Key="toggleCmd" Engine="{StaticResource engine}" />
-        <!-- Define a calculator to takes result from recognizer engine and calculates it -->
-        <c:Calculator x:Key="calc" Expression="{Binding Source={StaticResource engine}, Path=Result}" />
         <!-- Misc WPF stuffs -->
         <t:MyBooleanToVisibilityConverter x:Key="visConv" Invert="True" />
         <t:MyBooleanToVisibilityConverter x:Key="invVisConv" />
+        <!-- Styles -->
         <Style x:Key="exprBoxStyle" TargetType="Label">
             <Setter Property="FontFamily" Value="Palatino Linotype" />
             <Setter Property="FontSize" Value="32" />
@@ -31,6 +29,7 @@
         </Style>
     </Window.Resources>
     <Window.InputBindings>
+        <!-- Hitting the [SPACEBAR] toggles the recognizer on and off -->
         <KeyBinding Command="{StaticResource toggleCmd}" Key="Space" />
     </Window.InputBindings>
     <Border Background="White" CornerRadius="10" Margin="15">

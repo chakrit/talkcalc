@@ -1,6 +1,5 @@
 ﻿
 using System.Windows;
-using System.Diagnostics;
 
 namespace TalkCalc.Calculator
 {

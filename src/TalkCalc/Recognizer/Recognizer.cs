@@ -2,8 +2,6 @@
 using System.ComponentModel;
 using System.Windows;
 
-using Expression = System.Linq.Expressions.Expression;
-
 namespace TalkCalc.Recognizer
 {
     public partial class Recognizer : DependencyObject, IRecognizer

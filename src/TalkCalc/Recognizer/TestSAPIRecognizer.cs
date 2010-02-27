@@ -1,6 +1,5 @@
 ﻿
 using System.Speech.Recognition;
-using System.Linq.Expressions;
 
 namespace TalkCalc.Recognizer
 {
