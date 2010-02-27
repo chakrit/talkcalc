@@ -90,12 +90,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Content Include="HTK\in\calc.dict" />
-    <Content Include="HTK\in\calc.gram" />
-    <None Include="HTK\compile.bat" />
-    <None Include="HTK\in\liverecog.config" />
-    <None Include="HTK\in\thai_acoustic_model" />
-    <None Include="HTK\in\tie.list" />
+    <None Include="HTK\calc.dict" />
+    <None Include="HTK\calc.wdnet" />
+    <None Include="HTK\liverecog.config" />
+    <None Include="HTK\recog.bat" />
+    <None Include="HTK\thai.am" />
+    <None Include="HTK\tie.list" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,40 +118,7 @@
     <Compile Include="ToggleRecognizerCommand.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HTK\bin\Cluster.exe" />
-    <Content Include="HTK\bin\HBuild.exe" />
-    <Content Include="HTK\bin\HCompV.exe" />
-    <Content Include="HTK\bin\HCopy.exe" />
-    <Content Include="HTK\bin\HDMan.exe" />
-    <Content Include="HTK\bin\HERest.exe" />
-    <Content Include="HTK\bin\HHEd.exe" />
-    <Content Include="HTK\bin\HInit.exe" />
-    <Content Include="HTK\bin\HLEd.exe" />
-    <Content Include="HTK\bin\HList.exe" />
-    <Content Include="HTK\bin\HLMCopy.exe" />
-    <Content Include="HTK\bin\HLRescore.exe" />
-    <Content Include="HTK\bin\HLStats.exe" />
-    <Content Include="HTK\bin\HMMIRest.exe" />
-    <Content Include="HTK\bin\HParse.exe" />
-    <Content Include="HTK\bin\HQuant.exe" />
-    <Content Include="HTK\bin\HRest.exe" />
-    <Content Include="HTK\bin\HResults.exe" />
-    <Content Include="HTK\bin\HSGen.exe" />
-    <Content Include="HTK\bin\HSLab.exe" />
-    <Content Include="HTK\bin\HSmooth.exe" />
-    <Content Include="HTK\bin\HVite.exe" />
-    <Content Include="HTK\bin\LAdapt.exe" />
-    <Content Include="HTK\bin\LBuild.exe" />
-    <Content Include="HTK\bin\LFoF.exe" />
-    <Content Include="HTK\bin\LGCopy.exe" />
-    <Content Include="HTK\bin\LGList.exe" />
-    <Content Include="HTK\bin\LGPrep.exe" />
-    <Content Include="HTK\bin\LLink.exe" />
-    <Content Include="HTK\bin\LMerge.exe" />
-    <Content Include="HTK\bin\LNewMap.exe" />
-    <Content Include="HTK\bin\LNorm.exe" />
-    <Content Include="HTK\bin\LPlex.exe" />
-    <Content Include="HTK\bin\LSubset.exe" />
+    <Content Include="HTK\HVite.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
