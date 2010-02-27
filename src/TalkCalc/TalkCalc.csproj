@@ -95,7 +95,11 @@
     <None Include="HTK\compile.bat" />
     <None Include="HTK\gen_training_set.bat" />
     <None Include="HTK\in\code.config" />
+    <None Include="HTK\in\code.scp" />
+    <None Include="HTK\in\hmm_proto" />
     <None Include="HTK\in\monophones.mlf" />
+    <None Include="HTK\in\train.config" />
+    <None Include="HTK\in\train.scp" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -438,9 +442,6 @@
     <Content Include="HTK\in\samples\train\M004_021121_D304.wav" />
     <Content Include="HTK\in\samples\train\M004_021121_D305.wav" />
     <Content Include="HTK\in\samples\train\M004_021121_D306.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="HTK\data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
