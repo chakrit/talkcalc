@@ -92,10 +92,9 @@
     </EmbeddedResource>
     <Content Include="HTK\in\calc.dict" />
     <Content Include="HTK\in\calc.gram" />
-    <None Include="HTK\code.bat" />
-    <None Include="HTK\recognize.bat" />
-    <None Include="HTK\trainam.bat" />
-    <None Include="HTK\trainlm.bat" />
+    <None Include="HTK\compile.bat" />
+    <None Include="HTK\gen_training_set.bat" />
+    <None Include="HTK\in\monophones.mlf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -159,7 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HTK\data\" />
-    <Folder Include="HTK\out\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
