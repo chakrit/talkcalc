@@ -90,12 +90,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="HTK\calc.dict" />
-    <None Include="HTK\calc.wdnet" />
-    <None Include="HTK\liverecog.config" />
-    <None Include="HTK\recog.bat" />
-    <None Include="HTK\thai.am" />
-    <None Include="HTK\tie.list" />
+    <Content Include="HTK\calc.dict" />
+    <Content Include="HTK\calc.wdnet" />
+    <Content Include="HTK\liverecog.config" />
+    <Content Include="HTK\thai.am" />
+    <Content Include="HTK\tie.list" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -108,13 +107,13 @@
     <Compile Include="Calculator\ICalculator.cs" />
     <Compile Include="MyBooleanToVisibilityConverter.cs" />
     <Compile Include="Recognizer\HTKRecognizer.cs" />
+    <Compile Include="Recognizer\HTKTranslator.cs" />
     <Compile Include="Recognizer\Recognizer.cs" />
     <Compile Include="Recognizer\Recognizer.properties.cs" />
     <Compile Include="RecognizerCommand.cs" />
-    <Compile Include="Recognizer\TestNAudioRecordRecognizer.cs" />
+    <Compile Include="Recognizer\TestSAPIRecognizer.cs" />
     <Compile Include="StartRecognizerCommand.cs" />
     <Compile Include="StopRecognizerCommand.cs" />
-    <Compile Include="Recognizer\TestSAPIRecognizer.cs" />
     <Compile Include="ToggleRecognizerCommand.cs" />
   </ItemGroup>
   <ItemGroup>

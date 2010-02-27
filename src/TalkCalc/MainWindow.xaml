@@ -9,7 +9,8 @@
     ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <!-- Recognizer engine -->
-        <r:Recognizer x:Key="engine" />
+        <r:HTKRecognizer x:Key="engine" />
+        <!--<r:Recognizer x:Key="engine" />-->
         <!--<r:TestNAudioRecordRecognizer x:Key="engine" />-->
         <!--<r:TestSAPIRecognizer x:Key="engine" />-->
         <!-- Define commands for working with the engine -->
