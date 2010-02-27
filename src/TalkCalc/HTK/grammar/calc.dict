@@ -1,0 +1,24 @@
+ZERO [0] s uu n^ 
+ONE [1] n v ng^ 
+ONE_ALT [1] z e t^
+TWO [2] s @@ ng^ 
+TWO_ALT [2] j ii W
+THREE [3] s aa m^ 
+FOUR [4] s ii 
+FIVE [5] h aa 
+SIX [6] h o k^ 
+SEVEN [7] c e t^ 
+EIGHT [8] p xx t^ 
+NINE [9] k aa w^ 
+TEN [0] s i p^ 
+HUNDRED [00] r @@ j^ 
+THOUSAND [000] ph a n^ 
+TENTHOUSAND [0000] m vv n^ 
+HUNDREDTHOUSAND [00000] s xx n^ 
+PLUS [+] b uua k^
+MINUS [-] l u p^
+MULTIPLY [*] kh uu n^
+DIVIDE [/] h aa n^
+EQUAL [=] th aa w^ k a p^
+SENT-START [] sil 
+SENT-END [] sil 
