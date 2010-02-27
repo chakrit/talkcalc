@@ -158,6 +158,7 @@
     <Content Include="HTK\bin\LNorm.exe" />
     <Content Include="HTK\bin\LPlex.exe" />
     <Content Include="HTK\bin\LSubset.exe" />
+    <Content Include="HTK\bin\replacetext.exe" />
     <Content Include="HTK\in\samples\test\1+2x3.wav" />
     <Content Include="HTK\in\samples\test\100div25.wav" />
     <Content Include="HTK\in\samples\test\123456+7899.wav" />
