@@ -18,6 +18,8 @@ namespace TalkCalc.Calculator
         public float Calculate()
         {
             var expr = Expression;
+            Debug.WriteLine("CALC < " + expr);
+
             if (string.IsNullOrEmpty(expr))
                 return 0F;
 
@@ -62,7 +64,7 @@ namespace TalkCalc.Calculator
             // calculate all remaining values
             var result = flatten(nums, ops);
 
-            Debug.WriteLine("CALC> " + expr + " = " + result);
+            Debug.WriteLine("CALC > " + result);
             return result;
         }
 
@@ -95,7 +97,11 @@ namespace TalkCalc.Calculator
 
         protected virtual void OnExpressionChanged(DependencyPropertyChangedEventArgs e)
         {
-            Result = Calculate();
+            try { Result = Calculate(); }
+            catch (Exception ex)
+            {
+                Debugger.Break();
+            }
         }
 
         protected override void OnPropertyChanged(DependencyPropertyChangedEventArgs e)

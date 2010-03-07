@@ -17,6 +17,9 @@ namespace TalkCalc.Recognizer
         {
             Debug.WriteLine("HTK> " + htkResultLine);
 
+            if (string.IsNullOrEmpty(htkResultLine))
+                return string.Empty;
+
             // wait until htk stops level measuring
             if (!_ready)
             {
@@ -26,7 +29,7 @@ namespace TalkCalc.Recognizer
                 return string.Empty;
             }
 
-            if (!htkResultLine.StartsWith("SENT-START"))
+            if (!htkResultLine.StartsWith("START-SIL"))
                 // assume the line passed in ss a useless info line, nothing to translate
                 return string.Empty;
 
@@ -77,7 +80,7 @@ namespace TalkCalc.Recognizer
             {
                 switch (token)
                 {
-                    case "SENT-START": /* absorbed */ break;
+                    case "START-SIL": /* absorbed */ break;
 
                     case "ZERO": acceptZero(); break;
 
@@ -104,9 +107,10 @@ namespace TalkCalc.Recognizer
                     case "MULTIPLY": acceptOp("*"); break;
                     case "DIVIDE": acceptOp("/"); break;
 
-                    case "EQUAL": acceptEqual(); break;
+                    case "EQUAL":
+                    case "END-SIL": acceptEqual(); break;
 
-                    case "SENT-END":
+                    case "S":
                     default:
                         /* absorbed but really should throw exception
                          * since we shouldn't have gotten to this point in code */
@@ -116,6 +120,7 @@ namespace TalkCalc.Recognizer
                 if (isEnd) break;
             }
 
+            Debug.WriteLine("TRANSLATOR > " + result.ToString());
             return result.ToString();
         }
 
