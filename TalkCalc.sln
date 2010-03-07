@@ -3,7 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkCalc", "src\TalkCalc\TalkCalc.csproj", "{42BF1E19-5BBC-4A2F-BCCB-AEEB697FC422}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkCalc.Tests", "src\TalkCalc.Tests\TalkCalc.Tests.csproj", "{43F2A566-8F91-4765-AA08-5AA39D38E547}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F634899-9E02-4BC7-9302-7348749C60DB}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		TalkCalc.vsmdi = TalkCalc.vsmdi
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = TalkCalc.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -13,6 +24,10 @@ Global
 		{42BF1E19-5BBC-4A2F-BCCB-AEEB697FC422}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42BF1E19-5BBC-4A2F-BCCB-AEEB697FC422}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42BF1E19-5BBC-4A2F-BCCB-AEEB697FC422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F2A566-8F91-4765-AA08-5AA39D38E547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F2A566-8F91-4765-AA08-5AA39D38E547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F2A566-8F91-4765-AA08-5AA39D38E547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F2A566-8F91-4765-AA08-5AA39D38E547}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
