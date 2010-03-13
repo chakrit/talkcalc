@@ -33,10 +33,11 @@ namespace TalkCalc.Tests
         public void SingleOperationShouldEvaluateCorrectly()
         {
             test("1 + 1", 2F);
-            test("98 - 89", -9F);
+            test("98 - 89", 9F);
             test("7 * 7", 49F);
             test("888 / 888", 1F);
-            test("9 - 5", -4F);
+            test("9 - 5", 4F);
+            test("5 - 2", 3F);
         }
 
         [TestMethod]
