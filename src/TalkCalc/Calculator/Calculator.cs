@@ -77,8 +77,8 @@ namespace TalkCalc.Calculator
             {
                 var op = ops.Pop();
 
-                var opr1 = nums.Pop();
                 var opr2 = nums.Pop();
+                var opr1 = nums.Pop();
 
                 switch (op)
                 {
