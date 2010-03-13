@@ -1,7 +1,7 @@
 
-$ones = ONE | TWO | THREE | FOUR | FIVE | SIX | SEVEN | EIGHT | NINE;
-$ones_begin = TWO_ALT | THREE | FOUR | FIVE | SIX | SEVEN | EIGHT | NINE;
-$ones_end = ONE_ALT | TWO | THREE | FOUR | FIVE | SIX | SEVEN | EIGHT | NINE;
+$ones = S (ONE | TWO | THREE | FOUR | FIVE | SIX | SEVEN | EIGHT | NINE);
+$ones_begin = S (TWO_ALT | THREE | FOUR | FIVE | SIX | SEVEN | EIGHT | NINE);
+$ones_end = S (ONE_ALT | TWO | THREE | FOUR | FIVE | SIX | SEVEN | EIGHT | NINE);
 
 $tens = [$ones_begin] S TEN [$ones_end];
 $hundreds = [$ones] S HUNDRED [$tens | $ones_end];
@@ -14,6 +14,6 @@ $hundredthousands = [$ones] S HUNDREDTHOUSAND [$tenthousands_x | $thousands_x | 
 $hundredthousands_x = $ones S HUNDREDTHOUSAND [$tenthousands_x | $thousands_x | $hundreds_x | $tens | $ones];
 
 $numbers = ($hundredthousands | $tenthousands | $thousands | $hundreds | $tens | $ones | ZERO);
-$ops = PLUS | MINUS | MULTIPLY | DIVIDE;
+$ops = S (PLUS | MINUS | MULTIPLY | DIVIDE);
 
 ( START-SIL ($numbers [<$ops $numbers>]) END-SIL )
